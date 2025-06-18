@@ -1,0 +1,239 @@
+:root {
+    --dark-bg: #1E1E2A;
+    --card-bg: #2A2A3C;
+    --primary-blue: #3B82F6;
+    --text-light: #FFF;
+    --text-muted: #B0B0B8;
+    --dot-inactive: #d9d9d9;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    font-family: 'Sora', sans-serif;
+}
+
+/* -------------------- MOBILE (padrão) -------------------- */
+.content-wrapper {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.logo-section {
+    transition: all .2s ease;
+}
+
+.logo-img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    transition: .2s;
+}
+
+.app-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.info-card {
+    background: var(--card-bg);
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+    transition: .2s;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.card-text {
+    color: var(--text-light);
+    font-size: .95rem;
+    line-height: 1.6;
+    min-height: 100px;
+}
+
+/* -------- Carousel dots -------- */
+.carousel-indicators {
+    position: static;
+    margin: 1.5rem 0;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--dot-inactive);
+    transition: .3s;
+}
+
+.carousel-indicators .active {
+    width: 24px;
+    border-radius: 8px;
+    background: var(--text-light);
+}
+
+/* -------- Botões -------- */
+.btn {
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: .9rem 1rem;
+}
+
+.btn-primary {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #2a6ddc;
+    border-color: #2a6ddc;
+}
+
+.btn-link {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    color: var(--text-light);
+}
+
+/* ------------------------------------------------------------------
+    TABLET / DESKTOP
+------------------------------------------------------------------ */
+@media (min-width: 768px) {
+
+    main.container-fluid {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        max-width: unset;
+    }
+
+    .content-wrapper {
+        max-width: 550px;
+        flex: 1 1 0;
+        margin: 0 30px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo-section {
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+
+    .logo-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .app-title {
+        font-size: 2.8rem;
+    }
+
+    .info-card {
+        padding: 2.5rem;
+        width: 100%;
+        min-width: 300px;
+    }
+
+    .card-title {
+        font-size: 1.8rem;
+    }
+
+    .card-text {
+        font-size: 1.1rem;
+        min-height: 120px;
+        margin: 1.5rem 0;
+    }
+
+    .carousel-indicators {
+        margin: 2rem 0;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        opacity: .7;
+        width: auto;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .carousel-control-prev {
+        left: -80px;
+    }
+
+    .carousel-control-next {
+        right: -80px;
+    }
+
+    .btn {
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* ------------------------------------------------------------------
+   TELAS MUITO BAIXAS
+------------------------------------------------------------------ */
+@media (max-height: 700px) {
+    .logo-section {
+        padding-top: 2rem;
+    }
+
+    .logo-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .app-title {
+        font-size: 1.8rem;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+    }
+
+    .card-text {
+        font-size: .9rem;
+        min-height: 70px;
+        margin: 1rem 0;
+
+    }
+
+    .carousel-indicators {
+        margin: 1rem 0;
+    }
+
+    .btn {
+        padding: .75rem 1rem;
+        font-size: .95rem;
+    }
+}
